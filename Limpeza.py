@@ -16,6 +16,13 @@ cafe
 
 # %%
 
-replace = {"UNKNOWN": "Informação não encontrada", "ERROR": "Incorreto"}
+replace = {"UNKNOWN": "Informação não encontrada", "ERROR": "Incorreto", "Valor não encontrado": "0"}
 cafe = cafe.replace(replace)
-cafe.fillna({"Item" : "Item não encontrado","Quantidade": "0","Preço por Unidade": "0","Total Gasto": "0", "Forma de Pagamento" : "Pagamento não registrado", "Local":"Local não informado","Data de Trasação":"Data não encontrada" })
+cafe = cafe.fillna({"Item" : "Item não encontrado","Quantidade": "0","Preço por Unidade": "0","Total Gasto": "0", "Forma de Pagamento" : "Pagamento não registrado", "Local":"Local não informado","Data de Trasação":"Data não encontrada" })
+
+# %%
+cafe["Total Gasto"] = cafe["Total Gasto"].astype(float)
+top_5 = (cafe.sort_values(by= "Total Gasto", ascending=False)
+         .head(10)["Id de Transação"])
+
+top_5
