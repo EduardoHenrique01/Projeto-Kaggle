@@ -22,7 +22,7 @@ cafe = cafe.fillna({"Item" : "Item não encontrado","Quantidade": "0","Preço po
 
 # %%
 cafe["Total Gasto"] = cafe["Total Gasto"].astype(float)
-top_5 = (cafe.sort_values(by= "Total Gasto", ascending=False)
+top_10 = (cafe.sort_values(by= "Total Gasto", ascending=False)
          .head(10)["Id de Transação"])
 
-top_5
+top_10
