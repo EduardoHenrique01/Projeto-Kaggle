@@ -30,8 +30,4 @@ Esta fase focou em garantir a qualidade e a usabilidade dos dados:
 
 Após a limpeza, uma análise exploratória inicial foi realizada:
 
-<<<<<<< HEAD
 * **Identificação dos Clientes de Maior Gasto:** Ordenação do dataset para identificar e exibir o top 10 clientes que mais contribuíram em termos de gasto total.
-=======
-* **Identificação dos Clientes de Maior Gasto:** Ordenação do dataset para identificar e exibir o top 10 clientes que mais contribuíram em termos de gasto total.
->>>>>>> 33064fb91f68777ec79e1788f334b0b3d74348c6
